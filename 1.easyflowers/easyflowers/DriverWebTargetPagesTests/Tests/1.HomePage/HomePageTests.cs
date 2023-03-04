@@ -1,4 +1,6 @@
 ﻿using System;
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Reporter;
 using DriverWebTargetPages.Pages.HomePageModules;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -16,6 +18,7 @@ namespace DriverWebTargetPagesTests.Tests.HomePage
             _homePage = homePage;
             driver = _homePage.getWebDriver;
             driver.Navigate().GoToUrl(_homePage.retrieveWebAddress);
+
         }
 
         public void Dispose()
@@ -31,6 +34,7 @@ namespace DriverWebTargetPagesTests.Tests.HomePage
 
             var centermenu = _homePage.desktopHorizontalCenterMenu(driver);
             Assert.IsType<WebElement>(centermenu);
+
             var children = centermenu.FindElements(By.ClassName("category-group"));
             Assert.Equal(5, children.Count);
 

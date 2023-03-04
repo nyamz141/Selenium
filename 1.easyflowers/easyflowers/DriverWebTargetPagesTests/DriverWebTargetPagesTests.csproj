@@ -19,6 +19,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="ExtentReports" Version="4.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,11 +31,13 @@
     <None Remove="Tests\1.HomePage\" />
     <None Remove="Tests\3.MockPurchase\" />
     <None Remove="Tests\2.Accounts\" />
+    <None Remove="Tests\1.HomePage\Reports\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tests\" />
     <Folder Include="Tests\1.HomePage\" />
     <Folder Include="Tests\3.MockPurchase\" />
     <Folder Include="Tests\2.Accounts\" />
+    <Folder Include="Tests\1.HomePage\Reports\" />
   </ItemGroup>
 </Project>
